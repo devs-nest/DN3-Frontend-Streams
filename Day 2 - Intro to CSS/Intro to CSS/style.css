@@ -1,0 +1,33 @@
+/*1.  element */
+
+/*2 id selector */
+#first-heading {
+  color: royalblue;
+}
+
+/* 3 class attribute */
+.brown {
+  color: brown;
+}
+
+.royal-blue {
+  color: royalblue;
+}
+
+h1 {
+  color: red;
+  font-size: 40px;
+}
+
+.box {
+  padding: 24px 48px;
+  border: 2px solid;
+}
+
+p {
+  font-size: 2rem;
+}
+
+#red-color {
+  color: red;
+}

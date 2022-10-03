@@ -1,0 +1,9 @@
+.container {
+  display: grid;
+  grid-template-columns: 200px repeat(2, 1fr 1fr);
+  grid-template-rows: 200px 40%;
+  gap: 16px;
+}
+.container > div {
+  background-color: lightcoral;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 16px;
+      }
+      .box {
+        background-color: royalblue;
+        width: 200px;
+        height: 200px;
+        /* margin: 32px auto; */
+        /* margin: 10px; */
+      }
+      /* .box.second {
+        flex-basis: 400px; */
+      /* flex-grow: 1;
+        flex: 2 0 200px;
+      }
+      .box.third {
+        flex: 1 1 100px;
+      } */
+      .container {
+        display: flex;
+        /* flex-direction: column; */
+        height: 100vh;
+        /* overflow: hidden; */
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="box"></section>
+      <section class="box second"></section>
+      <section class="box third"></section>
+      <!-- <section class="box"></section>
+      <section class="box"></section>
+      <section class="box"></section> -->
+    </main>
+  </body>
+</html>

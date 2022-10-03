@@ -1,0 +1,38 @@
+body {
+  padding: 16px;
+}
+.box {
+  background-color: royalblue;
+  width: 300px;
+  height: 300px;
+  margin: 32px auto;
+  /* transition-property: transform;
+  transition-duration: 0.5s;
+  transition-delay: 1000ms;
+  transition-timing-function: cubic-bezier(0.55, 0.22, 0.58, 1) t; */
+  /* transition: transform 0.5s 0.4s cubic-bezier(0.55, 0.22, 0.58, 1); */
+  animation: rotation 0.8s 3 alternate;
+}
+
+/* .box:hover {
+  transform: scale(1.2);
+  width: 600px;
+} */
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  75% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,23 @@
+.container {
+  display: grid;
+  grid-template-columns: 200px 40rem 30%;
+  grid-template-rows: 300px 40%;
+  grid-auto-rows: 300px;
+  gap: 16px;
+  justify-content: center;
+}
+.item {
+  display: grid;
+  place-content: center;
+  background-color: lightblue;
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.first {
+  grid-column: span 2;
+}
+
+.second {
+  grid-row: span 2;
+}

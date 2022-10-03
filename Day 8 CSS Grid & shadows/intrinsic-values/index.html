@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro to CSS grid</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script src="main.js"></script>
+    <section class="option-container">
+      <section>
+        <label for="auto">auto</label>
+        <input type="radio" name="track-width" id="auto" value="auto" checked />
+      </section>
+      <section>
+        <label for="min-content">min-content</label>
+        <input type="radio" name="track-width" id="min-content" value="min-content" />
+      </section>
+      <section>
+        <label for="max-content">max-content</label>
+        <input type="radio" name="track-width" id="max-content" value="max-content" />
+      </section>
+      <section>
+        <label for="fit-content">fit-content</label>
+        <input type="radio" name="track-width" id="fit-content" value="fit-content(10em)" />
+      </section>
+    </section>
+    <div class="container">
+      <div class="item">first item</div>
+      <div class="item">second item</div>
+      <div class="item">third item with more text. it has really long text. longestword</div>
+    </div>
+  </body>
+</html>

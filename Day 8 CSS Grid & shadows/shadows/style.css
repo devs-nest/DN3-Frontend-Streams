@@ -1,0 +1,24 @@
+.card {
+  width: 300px;
+  height: 500px;
+  box-shadow: 3px 4px 18px 10px hsl(240deg 80% 90%);
+}
+.card h1 {
+  text-shadow: -3px -4px 33px red;
+}
+
+.cards {
+  display: flex;
+  place-content: center;
+}
+
+.parent {
+  height: 200px;
+  border: 3px solid;
+  overflow: scroll;
+}
+
+.child {
+  height: 400px;
+  border: 2px solid red;
+}

@@ -1,0 +1,20 @@
+.container {
+  --col-track-size: auto;
+  display: grid;
+  grid-template-columns: var(--col-track-size) var(--col-track-size) var(--col-track-size);
+  grid-template-rows: 200px;
+  gap: 16px;
+  width: 400px;
+  border: 2px solid;
+  padding: 8px;
+}
+
+.container > div {
+  background-color: lightcoral;
+}
+
+.option-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 16px;
+}

@@ -1,0 +1,13 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: 200px 300px;
+  grid-auto-flow: column;
+  gap: 16px;
+  /* width: 1280px; */
+  border: 1px solid;
+  /* writing-mode: vertical-lr; */
+}
+.container > div {
+  background-color: lightcoral;
+}
