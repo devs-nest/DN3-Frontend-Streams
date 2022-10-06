@@ -37,7 +37,6 @@ const loadCurrentForecast = ({ name, main: { temp, temp_max, temp_min }, weather
 }
 
 const loadHourlyForecast = ({ main: { temp: tempNow }, weather: [{ icon: iconNow }] }, hourlyForecast) => {
-    console.log(hourlyForecast);
     const timeFormatter = Intl.DateTimeFormat("en", {
         hour12: true, hour: "numeric"
     })
@@ -65,7 +64,6 @@ const calculateDayWiseForecast = (hourlyForecast) => {
     for (let forecast of hourlyForecast) {
         const [date] = forecast.dt_txt.split(" ");
         const dayOfTheWeek = DAYS_OF_THE_WEEK[new Date(date).getDay()]
-        console.log(dayOfTheWeek);
         if (dayWiseForecast.has(dayOfTheWeek)) {
             let forecastForTheDay = dayWiseForecast.get(dayOfTheWeek);
             forecastForTheDay.push(forecast);
@@ -75,19 +73,16 @@ const calculateDayWiseForecast = (hourlyForecast) => {
             dayWiseForecast.set(dayOfTheWeek, [forecast]);
         }
     }
-    console.log(dayWiseForecast);
     for (let [key, value] of dayWiseForecast) {
         let temp_min = Math.min(...Array.from(value, val => val.temp_min));
         let temp_max = Math.max(...Array.from(value, val => val.temp_max));
 
         dayWiseForecast.set(key, { temp_min, temp_max, icon: value.find(v => v.icon).icon })
     }
-    console.log(dayWiseForecast);
     return dayWiseForecast;
 }
 
 const loadFiveDayForecast = (hourlyForecast) => {
-    console.log(hourlyForecast)
     const dayWiseForecast = calculateDayWiseForecast(hourlyForecast);
     const container = document.querySelector(".five-day-forecast-container");
     let dayWiseInfo = "";
@@ -146,7 +141,6 @@ function debounce(func) {
         clearTimeout(timer); // clear existing timer
         // create a new time till the user is typing
         timer = setTimeout(() => {
-            console.log("debounce");
             func.apply(this, args)
         }, 500);
     }
@@ -165,20 +159,16 @@ const onSearchChange = async (event) => {
             options += `<option data-city-details='${JSON.stringify({ lat, lon, name })}' value="${name}, ${state}, ${country}"></option>`
         }
         document.querySelector("#cities").innerHTML = options;
-        console.log((listOfCities));
 
     }
 }
 
 const handleCitySelection = (event) => {
-    console.log("selection done");
     selectedCityText = event.target.value;
     let options = document.querySelectorAll("#cities > option");
-    console.log(options);
     if (options?.length) {
         let selectedOption = Array.from(options).find(opt => opt.value === selectedCityText);
         selectedCity = JSON.parse(selectedOption.getAttribute("data-city-details"));
-        console.log({ selectedCity });
         loadData();
     }
 }
