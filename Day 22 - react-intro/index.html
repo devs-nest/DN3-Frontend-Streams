@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>React Intro</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.18.0/babel.js"></script>
+    <script type="text/babel">
+      //   const root = document.getElementById("root");
+      //   const element = document.createElement("span");
+      //   element.className = "container";
+      //   element.textContent = "Hello Students";
+      //   root.appendChild(element);
+
+      //   const root = document.getElementById("root");
+      //   const element = React.createElement(
+      //     "span",
+      //     {
+      //       className: "container",
+      //     },
+      //     [
+      //       "Hello Students",
+      //       React.createElement("span", {
+      //         children: "What's up!",
+      //       }),
+      //     ]
+      //   );
+
+      const handleClick = () => {
+        alert("element clicked");
+      };
+      const root = document.getElementById("root");
+      const message = "Hello";
+      const Greeting = (props) => <p {...props}>{props.message}</p>;
+
+      const element = (
+        <>
+          <Greeting message="Hello" title="this will be shown on hovering" onClick={handleClick} />
+          <Greeting message="Students 🧨"></Greeting>
+          <Greeting message="What's up!" />
+        </>
+      );
+      ReactDOM.render(element, root);
+    </script>
+  </body>
+</html>
