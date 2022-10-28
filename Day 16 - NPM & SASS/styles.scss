@@ -1,0 +1,37 @@
+// variables
+$color: royalblue;
+// nesting
+
+article {
+  p {
+    color: $color;
+    span {
+      font-size: x-large;
+      color: $color;
+    }
+  }
+}
+
+// variables
+
+// inheritance
+
+%btn {
+  padding: 8px;
+  border-radius: 16px;
+  color: whitesmoke;
+}
+
+.default {
+  @extend %btn;
+  background-color: lightgray;
+}
+
+.primary {
+  @extend %btn;
+  background-color: $color;
+}
+.success {
+  @extend %btn;
+  background-color: darkgreen;
+}

@@ -1,0 +1,29 @@
+article p {
+  color: royalblue;
+}
+article p span {
+  font-size: x-large;
+  color: royalblue;
+}
+
+.success,
+.primary,
+.default {
+  padding: 8px;
+  border-radius: 16px;
+  color: whitesmoke;
+}
+
+.default {
+  background-color: lightgray;
+}
+
+.primary {
+  background-color: royalblue;
+}
+
+.success {
+  background-color: darkgreen;
+}
+
+/*# sourceMappingURL=output.css.map */
